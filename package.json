@@ -1,0 +1,30 @@
+{
+  "name": "npm-template-javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "browserslist": [
+    "ie 11",
+    "ios >= 10",
+    "> 1% in jp",
+    "not ie <= 10",
+    "not chrome 49"
+  ],
+  "scripts": {
+    "build": "babel src/ -d dist/",
+    "lint": "eslint --ext .js src",
+    "fix": "prettier --write src/**/*.{js,json}"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.11.1"
+  }
+}
