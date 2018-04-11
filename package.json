@@ -1,6 +1,6 @@
 {
   "name": "npm-template-javascript",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
   "browserslist": [
@@ -21,11 +21,14 @@
   },
   "scripts": {
     "postinstall": "flow-typed install",
+    "start": "babel-node",
+    "prebuild": "run-s clean lint",
     "build": "run-s build:*",
     "build:source": "babel src -d dist --ignore src/**/*.spec.js",
     "build:types": "flow gen-flow-files --out-dir dist src",
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "npm run test -- --watchAll",
+    "clean": "rimraf dist",
     "lint": "eslint --ext .js src",
     "fix": "prettier --write src/**/*.{js,json}",
     "typecheck": "flow",
@@ -35,6 +38,7 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.44",
     "@babel/core": "^7.0.0-beta.44",
+    "@babel/node": "^7.0.0-beta.44",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.44",
     "@babel/preset-env": "^7.0.0-beta.44",
     "@babel/preset-flow": "^7.0.0-beta.44",
@@ -54,6 +58,7 @@
     "jest": "^22.4.3",
     "lint-staged": "^7.0.4",
     "npm-run-all": "^4.1.2",
-    "prettier": "^1.11.1"
+    "prettier": "^1.11.1",
+    "rimraf": "^2.6.2"
   }
 }
