@@ -1,0 +1,9 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-flow"],
+  "plugins": ["@babel/plugin-proposal-object-rest-spread"],
+  "env": {
+    "test": {
+      "presets": [["@babel/preset-env", { "modules": false, "debug": true }], "@babel/preset-flow"]
+    }
+  }
+}

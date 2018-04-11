@@ -206,4 +206,5 @@ $RECYCLE.BIN/
 
 /.vscode
 /.idea
-/dest
+/dist
+/flow-typed
