@@ -1,3 +1,5 @@
-export default function(a, b) {
+// @flow
+
+export default function(a: number, b: number) {
   return a + b;
 }
