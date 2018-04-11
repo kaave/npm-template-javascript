@@ -10,11 +10,22 @@
     "not ie <= 10",
     "not chrome 49"
   ],
+  "lint-staged": {
+    "subTaskConcurrency": 1,
+    "linters": {
+      "*.{js,jsx}": [
+        "eslint --fix",
+        "git add"
+      ]
+    }
+  },
   "scripts": {
     "build": "babel src/ -d dist/",
     "lint": "eslint --ext .js src",
     "fix": "prettier --write src/**/*.{js,json}",
-    "typecheck": "flow"
+    "typecheck": "flow",
+    "lint-staged": "lint-staged",
+    "precommit": "run-s typecheck lint-staged"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.44",
@@ -31,6 +42,9 @@
     "eslint-plugin-prettier": "^2.6.0",
     "flow-bin": "^0.69.0",
     "flow-typed": "^2.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.4",
+    "npm-run-all": "^4.1.2",
     "prettier": "^1.11.1"
   }
 }
