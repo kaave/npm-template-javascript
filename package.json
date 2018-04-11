@@ -20,7 +20,9 @@
     }
   },
   "scripts": {
-    "build": "babel src/ -d dist/",
+    "build": "run-s build:*",
+    "build:source": "babel src -d dist",
+    "build:types": "flow gen-flow-files --out-dir dist src",
     "lint": "eslint --ext .js src",
     "fix": "prettier --write src/**/*.{js,json}",
     "typecheck": "flow",
@@ -32,6 +34,7 @@
     "@babel/core": "^7.0.0-beta.44",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.44",
     "@babel/preset-env": "^7.0.0-beta.44",
+    "@babel/preset-flow": "^7.0.0-beta.44",
     "babel-eslint": "^8.2.2",
     "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "^12.1.0",
