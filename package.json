@@ -19,6 +19,11 @@
       ]
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "run-s typecheck lint-staged"
+    }
+  },
   "scripts": {
     "postinstall": "flow-typed install",
     "start": "babel-node",
@@ -32,8 +37,7 @@
     "lint": "eslint --ext .js src",
     "fix": "prettier --write src/**/*.{js,json}",
     "typecheck": "flow",
-    "lint-staged": "lint-staged",
-    "precommit": "run-s typecheck lint-staged"
+    "lint-staged": "lint-staged"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
