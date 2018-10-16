@@ -35,7 +35,9 @@
     "test:watch": "npm run test -- --watchAll",
     "clean": "rimraf dist",
     "lint": "eslint --ext .js src",
-    "fix": "prettier --write src/**/*.{js,json}",
+    "fix": "run-s fix:*",
+    "fix:script": "eslint --ext .js --fix src",
+    "fix:json": "prettier --write src/**/*.js}",
     "typecheck": "flow",
     "lint-staged": "lint-staged"
   },
