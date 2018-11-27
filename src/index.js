@@ -1,5 +1,1 @@
-// @flow
-
-export default function(a: number, b: number) {
-  return a + b;
-}
+module.exports = (a, b) => a + b;

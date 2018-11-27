@@ -1,4 +1,4 @@
-import add from './index';
+const add = require('./');
 
 describe('index', () => {
   it('add', () => {

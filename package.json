@@ -19,14 +19,9 @@
       ]
     }
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "run-s typecheck lint-staged"
-    }
-  },
   "scripts": {
     "postinstall": "flow-typed install",
-    "start": "babel-node",
+    "start": "node",
     "prebuild": "run-s clean lint",
     "build": "run-s build:*",
     "build:source": "babel src -d dist --ignore src/**/*.spec.js",
@@ -38,8 +33,7 @@
     "fix": "run-s fix:*",
     "fix:script": "eslint --ext .js --fix src",
     "fix:json": "prettier --write src/**/*.js}",
-    "typecheck": "flow",
-    "lint-staged": "lint-staged"
+    "typecheck": "flow"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
@@ -57,11 +51,9 @@
     "eslint-plugin-flowtype-errors": "^3.6.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "flow-bin": "^0.83.0",
+    "flow-bin": "^0.86.0",
     "flow-typed": "^2.5.1",
-    "husky": "^1.1.2",
     "jest": "^23.6.0",
-    "lint-staged": "^7.3.0",
     "npm-run-all": "^4.1.3",
     "prettier": "^1.14.3",
     "rimraf": "^2.6.2"
