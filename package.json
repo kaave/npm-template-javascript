@@ -35,6 +35,9 @@
     "fix:json": "prettier --write src/**/*.js}",
     "typecheck": "flow"
   },
+  "resolutions": {
+    "babel-core": "^7.0.0-bridge.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
@@ -51,7 +54,7 @@
     "eslint-plugin-flowtype-errors": "^3.6.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "flow-bin": "^0.86.0",
+    "flow-bin": "^0.91.0",
     "flow-typed": "^2.5.1",
     "jest": "^23.6.0",
     "npm-run-all": "^4.1.3",
